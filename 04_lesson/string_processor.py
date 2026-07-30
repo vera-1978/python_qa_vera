@@ -7,7 +7,6 @@ class StringProcessor:
         if not processed_text.endswith("."):
             processed_text += "."
         return processed_text
-    print('первая буква строки должна быть заглавной')
 
 #     Проверить, что метод process класса StringProcessor корректно преобразует входную строку:
 # Первая буква строки должна быть заглавной. Если строка не заканчивается точкой,
