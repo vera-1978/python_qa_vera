@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2f2b6f4d-b7ca-409a-a669-5ed8a4216ec8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/04_lesson/colculator_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/04_lesson/colculator_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_lesson/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/04_lesson/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_lesson/string_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/04_lesson/string_processor.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="lesson3" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lesson3" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3Flyade2zkRbfDtXbxHy32FWBOP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests in colculator_abc.py.executor": "Run",
+    "Python tests.Python tests in colculator_test.py.executor": "Run",
+    "Python tests.Python tests in test_string_processor.py.executor": "Run",
+    "Python.address.executor": "Run",
+    "Python.calculator.executor": "Run",
+    "Python.cart.executor": "Run",
+    "Python.colculator_test.executor": "Run",
+    "Python.ex1.executor": "Run",
+    "Python.les00.executor": "Run",
+    "Python.lesson01.executor": "Run",
+    "Python.lesson_1_task_1.executor": "Run",
+    "Python.lesson_1_task_2.executor": "Run",
+    "Python.lesson_1_task_3.executor": "Run",
+    "Python.lesson_1_task_4.executor": "Run",
+    "Python.lesson_1_task_5.executor": "Run",
+    "Python.lesson_2_task_1.executor": "Run",
+    "Python.lesson_2_task_2.executor": "Run",
+    "Python.lesson_2_task_3.executor": "Run",
+    "Python.lesson_2_task_4.executor": "Run",
+    "Python.lesson_2_task_5.executor": "Run",
+    "Python.lesson_2_task_6.executor": "Run",
+    "Python.lesson_2_task_7.executor": "Run",
+    "Python.lesson_3_task_1.executor": "Run",
+    "Python.lesson_3_task_2.executor": "Run",
+    "Python.lesson_3_task_3.executor": "Run",
+    "Python.mailing.executor": "Run",
+    "Python.product.executor": "Run",
+    "Python.pytest.ini.executor": "Run",
+    "Python.string_processor.executor": "Run",
+    "Python.string_utils.executor": "Run",
+    "Python.user.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Lesson4",
+    "settings.editor.selected.configurable": "terminal"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\PycharmProjects\python_qa_vera\04_lesson" />
+      <recent name="C:\Users\Admin\PycharmProjects\python_qa_vera\lesson004" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="powershell.exe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-b3d66beaba9a-c6efb3732140-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26199.168" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f2b6f4d-b7ca-409a-a669-5ed8a4216ec8" name="Changes" comment="" />
+      <created>1782664015365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782664015365</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lesson01/lesson_1_task_4.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lesson02/lesson_2_task_6.py</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/04_lesson/calculator.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/04_lesson/colculator_test.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
