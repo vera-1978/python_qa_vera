@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 def test_session_storage_auth():
     driver = webdriver.Chrome()
+    wait = WebDriverWait(driver, 10)
     # Откройте страницу https://gitflic.ru/.
     driver.get('https://gitflic.ru/')
     # Установите cookie пользователя 1.
