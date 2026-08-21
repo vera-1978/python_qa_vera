@@ -13,7 +13,7 @@ def driver():
 
 def test_slow_calculator(driver):
     page = CalcPage(driver)
-    page.set_delay(4)  # Устанавливаем задержку калькулятора в 4 секунды
+    page.set_delay(50)  # Устанавливаем задержку калькулятора в 4 секунды
     page.click_buttons()
     page.wait_for_display_text("15")
     final_result = page.get_display_text()

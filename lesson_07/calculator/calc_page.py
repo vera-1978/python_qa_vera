@@ -15,7 +15,7 @@ class CalcPage:
     def __init__(self, driver):
         self.driver = driver
         self.short_wait = WebDriverWait(driver, 10)
-        self.long_wait = WebDriverWait(driver, 45)
+        self.long_wait = WebDriverWait(driver, 50)
 
     def set_delay(self, delay_value):
         delay_input = self.short_wait.until(EC.element_to_be_clickable(self.DELAY_INPUT))

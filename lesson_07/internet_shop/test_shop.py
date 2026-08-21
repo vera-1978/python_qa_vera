@@ -13,8 +13,9 @@ def driver():
 
 def test_ecommerce_purchase_flow(driver):
     # Открыть сайт магазина.
-    # Авторизоваться как пользователь standard_user.
     driver.get('https://saucedemo.com')
+
+    # Авторизоваться как пользователь standard_user.
     login_page = StandardPage(driver)
     login_page.login('standard_user', 'secret_sauce')
 
@@ -26,19 +27,27 @@ def test_ecommerce_purchase_flow(driver):
     inventory_page.Backpack_button()
     inventory_page.Bolt_T_Shirt_button()
     inventory_page.onesie_button()
+
+    # Перейти в карзину.
     inventory_page.basket_button()
 
+    # Нажать кнопку Checkout.
+    cart_page = CartPage(driver)
+    cart_page.checkout_button()
 
+    # Заполнить форму своими данными:
+    # имя, фамилия, почтовый индекс.
+    checkout_page = CheckoutPage(driver)
+    checkout_page.fill_checkout_form(
+        'Vera',
+        'Ivanova',
+        '424910'
+    )
 
+    checkout_page.continue_button()
 
+    # Прочитать со страницы итоговую стоимость (Total).
+    total_text = checkout_page.get_total_price_text()
 
-
-# Перейти в корзину.
-# Нажать кнопку Checkout.
-# Заполнить форму своими данными:
-# Имя.
-# Фамилия.
-# Почтовый индекс.
-# Прочитать со страницы итоговую стоимость (Total).
-# Закрыть браузер.
-# Проверить (assert), что итоговая сумма равна $58.29.
+    # Проверить (assert), что итоговая сумма равна $58.29.
+    assert total_text == "Total: $58.29", f"Ожидалась сумма 'Total: $58.29', но получена '{total_text}'"

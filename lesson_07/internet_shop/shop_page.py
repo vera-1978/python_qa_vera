@@ -85,8 +85,3 @@ class CheckoutPage(ShopPage):
     def continue_button(self):
         self.wait.until(
             EC.element_to_be_clickable(self.CONTINUE_BUTTON)).click()
-
-    # Проверка итоговой стоимости.
-        total_text = checkout_page.get_total_price_text()
-
-        assert total_text == "Total: $58.29", {total_text}
