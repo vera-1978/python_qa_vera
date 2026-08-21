@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from lesson_07.internet_shop.shop_page import ShopPage, StandardPage, InventoryPage, CartPage, CheckoutPage
+from lesson_07.internet_shop.shop_page import StandardPage, InventoryPage, CartPage, CheckoutPage
 
 
 # Фикстура для автоматического запуска и закрытия браузера Firefox
@@ -13,7 +13,7 @@ def driver():
 
 def test_ecommerce_purchase_flow(driver):
     # Открыть сайт магазина.
-    driver.get('https://saucedemo.com')
+    driver.get('https://saucedemo.com/')
 
     # Авторизоваться как пользователь standard_user.
     login_page = StandardPage(driver)

@@ -95,7 +95,7 @@ class CheckoutPage(ShopPage):
             EC.element_to_be_clickable(self.CONTINUE_BUTTON)).click()
 
     def get_total_price_text(self):
-        total = self.wait.until( EC.visibility_of_element_located(
-            (self. TOTAL_ELEMENT)))
-
+        total = self.wait.until(
+            EC.visibility_of_element_located(self.TOTAL_ELEMENT)
+        )
         return total.text
