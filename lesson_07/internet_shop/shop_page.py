@@ -57,11 +57,19 @@ class InventoryPage(ShopPage):
     # Создание класса для страницы корзины,
     # который будет содержать методы для нажатия кнопки Checkout
 class CartPage(ShopPage):
+    CART_ITEM_NAMES = (By.CLASS_NAME, 'inventory_item_name')
     CHECKOUT_BUTTON = (By.ID, 'checkout')
+
+    def get_item_names(self):
+        # Ожидаем появление хотя бы одного товара в корзине
+        self.wait.until(EC.presence_of_element_located(self.CART_ITEM_NAMES))
+        # Находим все элементы с названиями
+        elements = self.driver.find_elements(*self.CART_ITEM_NAMES)
+        # Возвращаем список их текстовых значений
+        return [element.text for element in elements]
 
     def checkout_button(self):
         self.wait.until(EC.element_to_be_clickable(self.CHECKOUT_BUTTON)).click()
-
 
     # Создание класса для страницы оформления заказа
 
@@ -85,3 +93,9 @@ class CheckoutPage(ShopPage):
     def continue_button(self):
         self.wait.until(
             EC.element_to_be_clickable(self.CONTINUE_BUTTON)).click()
+
+    def get_total_price_text(self):
+        total = self.wait.until( EC.visibility_of_element_located(
+            (self. TOTAL_ELEMENT)))
+
+        return total.text

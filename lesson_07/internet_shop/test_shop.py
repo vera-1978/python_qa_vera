@@ -33,6 +33,7 @@ def test_ecommerce_purchase_flow(driver):
 
     # Нажать кнопку Checkout.
     cart_page = CartPage(driver)
+    cart_page.get_item_names()
     cart_page.checkout_button()
 
     # Заполнить форму своими данными:
@@ -50,4 +51,4 @@ def test_ecommerce_purchase_flow(driver):
     total_text = checkout_page.get_total_price_text()
 
     # Проверить (assert), что итоговая сумма равна $58.29.
-    assert total_text == "Total: $58.29", f"Ожидалась сумма 'Total: $58.29', но получена '{total_text}'"
+    assert total_text == "Total: $58.29"
