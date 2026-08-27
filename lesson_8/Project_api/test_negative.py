@@ -1,9 +1,9 @@
 import requests
 
 
-API_TOKEN = "XJiQs13XL1Hyunu0qauKQqJK0loj3tuSZZpgfK01taCRuDIjIqHgWantx9cvFJpd"
+API_TOKEN = "YOUGILE_TOKEN"
 URL = "https://ru.yougile.com/api-v2/projects"
-PROJECT_ID = "33c7e041-f93a-42fe-9801-73062e02b980"
+PROJECT_ID = "YOUGILE_PROJECT_ID"
 
 
 def test_create_project_success():

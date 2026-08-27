@@ -2,7 +2,7 @@ from page_project import ProjectApi
 
 
 api = ProjectApi()
-PROJECT_ID = "33c7e041-f93a-42fe-9801-73062e02b980"
+PROJECT_ID = "YOUGILE_PROJECT_ID"
 
 
 def test_create_project_success():
