@@ -3,8 +3,8 @@ import requests
 # Применение паттерна PageObject для позитивного теста.
 class ProjectApi:
     def __init__(self):
-        self.url = "https://ru.yougile.com/api-v2"
-        self.token = "YOUGILE_TOKEN"
+        self.url = "https://ru.yougile.com/api-v2/projects"
+        self.token = "XJiQs13XL1Hyunu0qauKQqJK0loj3tuSZZpgfK01taCRuDIjIqHgWantx9cvFJpd"
 
         self.headers = {
             "Authorization": f"Bearer {self.token}",
