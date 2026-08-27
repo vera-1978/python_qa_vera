@@ -67,11 +67,11 @@ def test_get_projects():
     response_data = response.json()
     assert "id" in response_data
 
-
+    # Негативный сценарий: отправляем пустые заголовки без поля Authorization
     headers = {
-        "Authorization": f"Bearer {API_TOKEN}",
+        # "Authorization": f"Bearer {API_TOKEN}",
         "Content-Type": "application/json",
     }
     resp = requests.get(URL, headers=headers)
 
-    assert resp.status_code == 200
+    assert resp.status_code == 400
