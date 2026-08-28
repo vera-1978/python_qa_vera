@@ -1,9 +1,9 @@
 import requests
 
 
-API_TOKEN = "YOUGILE_TOKEN"
+API_TOKEN = "XJiQs13XL1Hyunu0qauKQqJK0loj3tuSZZpgfK01taCRuDIjIqHgWantx9cvFJpd"
 URL = "https://ru.yougile.com/api-v2/projects"
-PROJECT_ID = "YOUGILE_PROJECT_ID"
+PROJECT_ID = "33c7e041-f93a-42fe-9801-73062e02b980"
 
 
 def test_create_project_success():
@@ -19,9 +19,6 @@ def test_create_project_success():
 
     # Проверяем, что сервер вернул ошибку 400
     assert response.status_code == 400
-    response_data = response.json()
-    # Проверяем, что ID не создался
-    assert "id" in response_data
 
 
 def test_update_project():
@@ -35,6 +32,8 @@ def test_update_project():
     response = requests.post(URL, json=payload, headers=headers)
 
     assert response.status_code == 201
+    response_data = response.json()
+    assert "id" in response_data
 
     # Негативный сценарий: в верхней части файла объявлена константа
     # заглавными буквами (API_TOKEN), а внутри теста написана строчными (api_token).
@@ -46,11 +45,8 @@ def test_update_project():
 
     payload = {"title": "Новое название"}
     resp = requests.put(url, headers=headers, json=payload)
-    body = resp.json()
 
-    assert resp.status_code == 400
-    assert "id" in body
-
+    assert resp.status_code == 401
 
 
 def test_get_projects():
@@ -58,9 +54,7 @@ def test_get_projects():
         "Authorization": f"Bearer {API_TOKEN}",
         "Content-Type": "application/json",
     }
-
     payload = {"title": "Первый проект"}
-
     response = requests.post(URL, json=payload, headers=headers)
 
     assert response.status_code == 201
@@ -74,4 +68,4 @@ def test_get_projects():
     }
     resp = requests.get(URL, headers=headers)
 
-    assert resp.status_code == 400
+    assert resp.status_code == 401
