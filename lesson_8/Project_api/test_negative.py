@@ -36,7 +36,8 @@ def test_update_project():
     assert "id" in response_data
 
     # Негативный сценарий: в верхней части файла объявлена константа
-    # заглавными буквами (API_TOKEN), а внутри теста написана строчными (api_token).
+    # заглавными буквами (API_TOKEN),
+    # а внутри теста написана строчными (api_token).
     headers = {
         "Authorization": f"Bearer {api_token}",
         "Content-Type": "application/json",
