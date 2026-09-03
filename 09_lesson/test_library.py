@@ -24,8 +24,7 @@ SELECT_AUTHOR_QUERY = text("""
 
 DELETE_AUTHOR_QUERY = text("DELETE FROM authors WHERE author_id = :author_id;")
 
-engine = create_engine(
-    "postgresql+psycopg2://postgres:V1e2r3a4@localhost:5432/postgres")
+engine = create_engine("BASE")
 
 
 @pytest.fixture
