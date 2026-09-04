@@ -84,7 +84,7 @@ def test_update_author(db_author):
         )
         connection.commit()
 
-        # ПРОВЕРКА ИЗМЕНЕНИЙ
+        # Проверка изменений
         updated_author = connection.execute(
             SELECT_AUTHOR_QUERY, {"author_id": db_author}).mappings().one()
 
