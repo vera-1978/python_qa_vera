@@ -1,5 +1,6 @@
 import pytest
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
 
 
 INSERT_AUTHOR_QUERY = text("""
@@ -24,7 +25,7 @@ SELECT_AUTHOR_QUERY = text("""
 
 DELETE_AUTHOR_QUERY = text("DELETE FROM authors WHERE author_id = :author_id;")
 
-engine = create_engine("BASE")
+engine = create_engine("DATABASE_URL")
 
 
 @pytest.fixture
@@ -45,9 +46,17 @@ def db_author():
         return author_id
 
 
-def test_authors(db_author):
+def test_create__authors(db_author):
     # Проверяем, что ID существует
     assert db_author is not None
+
+    with engine.connect() as connection:
+        result = connection.execute(
+            SELECT_AUTHOR_QUERY, {"author_id": db_author}
+        ).mappings().one()
+        assert result["first_name"] == 'Александр'
+        assert result["last_name"] == 'Пушкин'
+        assert result["birth_year"] == 1799
 
     # Очистка.
     with engine.connect() as connection:
