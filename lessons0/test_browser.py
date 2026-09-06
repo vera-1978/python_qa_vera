@@ -5,7 +5,7 @@ import time
 
 def test_open_google():
     # Настраиваем службу и указываем наш файл драйвера
-    service = Service(executable_path="geckodriver.exe")
+    service = Service(executable_path="../geckodriver.exe")
 
     # Запускаем браузер Firefox
     driver = webdriver.Firefox(service=service)

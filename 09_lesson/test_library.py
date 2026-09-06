@@ -46,7 +46,7 @@ def db_author():
         return author_id
 
 
-def test_create__authors(db_author):
+def test_create_authors(db_author):
     # Проверяем, что ID существует
     assert db_author is not None
 
