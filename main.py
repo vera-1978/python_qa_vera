@@ -8,4 +8,3 @@ load_dotenv()
 database_url = os.getenv("DATABASEQA")
 
 print(f"Адрес базы данных: {database_url}")
-
