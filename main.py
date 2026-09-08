@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Получаем значение переменной
-database_url = os.getenv("DATABASE_URL")
+database_url = os.getenv("DATABASEQA")
 
 print(f"Адрес базы данных: {database_url}")
 

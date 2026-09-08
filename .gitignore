@@ -216,5 +216,4 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-lesson00/
-test_library.py/
+lesson_08/
