@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.remote.webdriver import WebDriver
 
 
 class CalcPage:
@@ -13,28 +14,50 @@ class CalcPage:
     BUTTON_EQUALS = (By.CSS_SELECTOR, '.btn.btn-outline-warning')
     DISPLAY = (By.CSS_SELECTOR, ".screen")
 
-    def __init__(self, driver):
+    def __init__(self, driver: WebDriver) -> None:
         self.driver = driver
         self.short_wait = WebDriverWait(driver, 10)
         self.long_wait = WebDriverWait(driver, 50)
 
-    def set_delay(self, delay_value):
+    def set_delay(self, delay_value: int | str) -> None:
+        """
+        Устанавливает значение задержки в секундах в поле ввода.
+
+        Args:
+            delay_value (int | str): Время задержки в секундах.
+        """
         delay_input = self.short_wait.until(
             EC.element_to_be_clickable(self.DELAY_INPUT))
         delay_input.clear()
         delay_input.send_keys(str(delay_value))
 
-    def click_buttons(self):
+    def click_buttons(self) -> None:
+        """
+        Последовательно нажимает кнопки калькулятора для операции '7 + 8 ='.
+        """
         self.driver.find_element(*self.BUTTON_7).click()
         self.driver.find_element(*self.BUTTON_PLUS).click()
         self.driver.find_element(*self.BUTTON_8).click()
         self.driver.find_element(*self.BUTTON_EQUALS).click()
 
-    def wait_for_display_text(self, text):
-        """Ожидает, пока в поле дисплея появится указанный текст."""
+    def wait_for_display_text(self, text: str) -> bool:
+        """
+        Ожидает, пока в поле дисплея появится указанный текст.
+
+        Args:
+            text (str): Ожидаемый текст на экране калькулятора.
+
+        Returns:
+            bool: True, если текст появился в течение времени ожидания.
+        """
         return self.long_wait.until(
             EC.text_to_be_present_in_element(self.DISPLAY, text))
 
-    def get_display_text(self):
-        """Возвращает текущее текстовое значение экрана."""
+    def get_display_text(self) -> str:
+        """
+        Возвращает текущее текстовое значение экрана.
+
+        Returns:
+            str: Отображаемый на дисплее текст.
+        """
         return self.driver.find_element(*self.DISPLAY).text
